@@ -1,9 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -22,7 +22,6 @@ module.exports = merge(common, {
             loader: 'css-loader',
             options: {
               sourceMap: false
-              // modules: true
             }
           },
           'sass-loader'
@@ -47,7 +46,5 @@ module.exports = merge(common, {
       filename: 'css/[name].css',
       chunkFilename: '[id].css'
     })
-    // new CopyWebpackPlugin([{ from: 'src/assets/images', to: 'images/' }])
   ]
-  // devtool: 'source-map'
 });
