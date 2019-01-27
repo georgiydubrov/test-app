@@ -1,0 +1,25 @@
+/* --- Colors --- */
+$white: #fff;
+$black: #000;
+$light-black: rgba(0,0,0,.3);
+$medium-black: rgba(0,0,0,.5);
+$gray: #4a4a4a;
+$light-gray: #d8d8d8;
+
+/* Main colors */
+$link-color: $black;
+$link-hover-color: $black;
+/* Header */
+$header-bg-color: $light-black;
+$header-color: $white;
+/* List & Items */
+$item-block-hover-bg-color: $light-gray;
+$item-block-border-color: $light-gray;
+$item-state-border-color: $gray;
+$item-inactive-bg-color: transparent;
+$item-active-bg-color: $gray;
+/* Footer */
+$footer-bg-color: $light-black;
+$footer-color: $white;
+/* Spinner */
+$layout-bg-color: $medium-black;

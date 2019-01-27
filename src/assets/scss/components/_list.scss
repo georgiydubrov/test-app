@@ -1,0 +1,60 @@
+.list-block {
+  width: 600px;
+  padding: 30px;
+  margin: auto;
+  
+  .item-block {
+    padding: 20px;
+    border: 1px solid $item-block-border-color;
+      
+    &:not(:last-child) {
+      border-bottom: none; 
+    } 
+      
+    &:hover {
+      background-color: $item-block-hover-bg-color;
+    }
+    
+    i {
+      display: block;
+      width: 20px;
+      height: 20px;
+      cursor: pointer; 
+      
+      &:not(:last-child) {
+        margin-right: 20px; 
+      }
+      
+      &.item-state {
+        border: 2px solid $item-state-border-color;
+        border-radius: 50%;
+        background-color: transparent;
+        flex: 0 0 20px;
+        
+        &.active {
+          background-color: $item-active-bg-color;
+        }
+      }
+        
+      &.item-edit {
+        background-image: url(../images/edit.svg);
+      }
+      
+      &.item-waste {
+        background-image: url(../images/waste-bin.svg);
+      }
+    }
+
+    button {
+      margin-top: 30px;
+    }
+  }
+  .spinner-layout {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $layout-bg-color;
+    left: 0;
+    top: 0;
+  }
+}

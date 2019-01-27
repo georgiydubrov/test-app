@@ -1,0 +1,16 @@
+/* --- Fonts --- */
+@import url(https://fonts.googleapis.com/css?family=Aleo:300,400,700|Roboto:300,400,500,700);
+
+@import 'reset';
+@import 'variables';
+@import 'components/header';
+@import 'components/list';
+@import 'components/footer';
+
+body {
+  font-family: "Aleo", Roboto, "Helvetica Neue", Arial -apple-system;
+
+  main {
+    min-height: calc(100vh - 180px);
+  }
+}

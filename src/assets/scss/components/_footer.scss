@@ -1,0 +1,19 @@
+footer {
+  height: 80px;
+  padding: 0 30px;
+  background-color: $footer-bg-color;
+  color: $footer-color;
+
+  small {
+    font-size: 0.75rem;
+    
+    a {
+      color: $link-color;
+    
+      &:hover {
+        color: $link-hover-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
