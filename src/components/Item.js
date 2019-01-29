@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import * as itemActions from '../actions';
 
@@ -45,6 +46,13 @@ const Item = ({
       </div>
     </li>
   );
+};
+
+Item.propTypes = {
+  item: PropTypes.objectOf(PropTypes.any).isRequired,
+  changeState: PropTypes.func.isRequired,
+  changeText: PropTypes.func.isRequired,
+  deleteItem: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => ({

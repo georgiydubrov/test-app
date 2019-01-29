@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { addNewItem } from '../actions';
 
-const AddButton = ({ items, loading, addItem }) => {
+const AddButton = ({ addItem }) => {
   const showAddPopUp = () =>
     Swal.fire({
       text: 'Please enter text',

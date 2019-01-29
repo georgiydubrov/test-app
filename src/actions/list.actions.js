@@ -1,6 +1,13 @@
 import { getItemsList, fakeDelay } from '../helpers';
 import { listConstants } from '../constants';
 
+/**
+ * Returns updated list with new item
+ * @param { Object } item
+ * @param { Number } item.id
+ * @param { String } item.text
+ * @param { Boolean } item.state
+ */
 export const updateListWithNewItem = item => dispatch => {
   dispatch({ type: listConstants.UPDATE_LIST_REQUEST });
   return fakeDelay().then(() => {
@@ -11,6 +18,13 @@ export const updateListWithNewItem = item => dispatch => {
   });
 };
 
+/**
+ * Returns updated list with updated item
+ * @param { Object } item
+ * @param { Number } item.id
+ * @param { String } item.text
+ * @param { Boolean } item.state
+ */
 export const updateListWithUpdatedItem = item => dispatch => {
   dispatch({ type: listConstants.UPDATE_LIST_REQUEST });
   return fakeDelay().then(() => {
@@ -23,6 +37,13 @@ export const updateListWithUpdatedItem = item => dispatch => {
   });
 };
 
+/**
+ * Returns updated list without item
+ * @param { Object } item
+ * @param { Number } item.id
+ * @param { String } item.text
+ * @param { Boolean } item.state
+ */
 export const updateListWithoutDeletedItem = item => dispatch => {
   dispatch({ type: listConstants.UPDATE_LIST_REQUEST });
   const items = getItemsList();
