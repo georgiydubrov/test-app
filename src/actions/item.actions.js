@@ -6,6 +6,10 @@ import {
   updateListWithoutDeletedItem
 } from './list.actions';
 
+/**
+ * Returns new item to be added
+ * @param { String } text
+ */
 export const addNewItem = text => dispatch => {
   dispatch({ type: itemConstants.ADD_ITEM_REQUEST });
   const newItem = {
@@ -21,6 +25,13 @@ export const addNewItem = text => dispatch => {
     );
 };
 
+/**
+ * Returns item with updated state
+ * @param { Object } item
+ * @param { Number } item.id
+ * @param { String } item.text
+ * @param { Boolean } item.state
+ */
 export const changeItemState = item => dispatch => {
   dispatch({ type: itemConstants.TOGGLE_ITEM_ITEM_REQUEST });
   const newItem = { ...item, state: !item.state };
@@ -32,6 +43,14 @@ export const changeItemState = item => dispatch => {
     );
 };
 
+/**
+ * Returns item with updated text
+ * @param { String } text
+ * @param { Object } item
+ * @param { Number } item.id
+ * @param { String } item.text
+ * @param { Boolean } item.state
+ */
 export const changeItemText = (item, text) => dispatch => {
   dispatch({ type: itemConstants.UPDATE_ITEM_REQUEST });
   const newItem = { ...item, text };
@@ -43,6 +62,13 @@ export const changeItemText = (item, text) => dispatch => {
     );
 };
 
+/**
+ * Returns item to be deleted
+ * @param { Object } item
+ * @param { Number } item.id
+ * @param { String } item.text
+ * @param { Boolean } item.state
+ */
 export const deleteItem = item => dispatch => {
   dispatch({ type: itemConstants.DELETE_ITEM_REQUEST });
   dispatch(updateListWithoutDeletedItem(item))

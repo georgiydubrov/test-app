@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
+import PropTypes from 'prop-types';
 
 import { Item, AddButton } from '.';
 import { addNewItem } from '../actions';
 
 const renderList = list => list.map(i => <Item key={i.id} item={i} />);
 
-const List = ({ items, loading, addItem }) => (
+const List = ({ items, loading }) => (
   <div className="list-block d-flex flex-column">
     <ul>{renderList(items)}</ul>
     <AddButton />
@@ -18,6 +19,11 @@ const List = ({ items, loading, addItem }) => (
     )}
   </div>
 );
+
+List.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.any).isRequired,
+  loading: PropTypes.bool.isRequired
+};
 
 const mapStateToProps = ({ list: { items, loading } }) => ({
   items,
